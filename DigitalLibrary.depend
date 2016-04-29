@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1461917758 source:/home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/main.cpp
+	<iostream>
+	"digiLibBook.h"
+
+1461917747 /home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/include/digiLibBook.h
+	<string>
+
+1461917295 source:/home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/src/digiLibBook.cpp
+	"digiLibBook.h"
+
+1461921102 source:/home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/src/digiLibClient.cpp
+	"digiLibClient.h"
+
+1461921509 /home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/include/digiLibClient.h
+	<cstdlib>
+	<iostream>
+	<boost/array.hpp>
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+	<string>
+	<sstream>
+	"digiLibBook.h"
+	<boost/enable_shared_from_this.hpp>
+
+1461921869 source:/home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/src/digiLibUser.cpp
+	"digiLibUser.h"
+	<iostream>
+	"ManageDigiLibBooks.h"
+
+1461921919 /home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/include/digiLibUser.h
+	<iostream>
+	"ManageDigiLibBooks.h"
+
+1461920462 /home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/include/ManageDigiLibBooks.h
+
+1461921323 source:/home/haroon01/Desktop/digilibTestingfiles/DigitalLibrary/src/ManageDigiLibBooks.cpp
+	"ManageDigiLibBooks.h"
+	<stdlib.h>
+	<limits>
+	"digiLibUser.h"
+	"unistd.h"
+	"stdio.h"
+	"digiLibBook.h"
+	"digiLibClient.h"
+
