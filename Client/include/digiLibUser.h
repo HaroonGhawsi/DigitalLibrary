@@ -16,7 +16,7 @@ class digiLibUser
     private:
 
     int userSelection;
-    ManageDigiLibBooks *mBooks;
+
 };
 
 #endif // DIGILIBUSER_H

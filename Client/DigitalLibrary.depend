@@ -44,3 +44,44 @@
 	"digiLibBook.h"
 	"digiLibClient.h"
 
+1462051657 source:/home/haroon/DigitalLibrary/DigitalLibrary/Client/src/digiLibBook.cpp
+	"digiLibBook.h"
+
+1462051657 /home/haroon/DigitalLibrary/DigitalLibrary/Client/include/digiLibBook.h
+	<string>
+
+1462051657 source:/home/haroon/DigitalLibrary/DigitalLibrary/Client/src/digiLibClient.cpp
+	"digiLibClient.h"
+
+1462051657 /home/haroon/DigitalLibrary/DigitalLibrary/Client/include/digiLibClient.h
+	<cstdlib>
+	<iostream>
+	<boost/array.hpp>
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+	<string>
+	<sstream>
+	"digiLibBook.h"
+	<boost/enable_shared_from_this.hpp>
+
+1462051657 source:/home/haroon/DigitalLibrary/DigitalLibrary/Client/src/digiLibUser.cpp
+	"ManageDigiLibBooks.h"
+	"digiLibUser.h"
+	<iostream>
+
+1462051657 /home/haroon/DigitalLibrary/DigitalLibrary/Client/include/ManageDigiLibBooks.h
+
+1462051657 /home/haroon/DigitalLibrary/DigitalLibrary/Client/include/digiLibUser.h
+	<iostream>
+	"ManageDigiLibBooks.h"
+
+1462051657 source:/home/haroon/DigitalLibrary/DigitalLibrary/Client/src/ManageDigiLibBooks.cpp
+	"ManageDigiLibBooks.h"
+	<stdlib.h>
+	<limits>
+	"digiLibUser.h"
+	"unistd.h"
+	"stdio.h"
+	"digiLibBook.h"
+	"digiLibClient.h"
+

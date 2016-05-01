@@ -3,11 +3,9 @@
 #include <iostream>
 
 
-digiLibUser::digiLibUser(){
-}
+digiLibUser::digiLibUser(){}
 
-digiLibUser::~digiLibUser(){
-}
+digiLibUser::~digiLibUser(){}
 
 void digiLibUser::userNavigationMenu(){
 
@@ -22,8 +20,8 @@ void digiLibUser::userNavigationMenu(){
     std::cout << "Press 5 to View list of borrowed books in the library\n";
     std::cout << "Press 0 to Exit\n";
     std::cin >> userSelection;
-    mBooks->userRequestProcessor(userSelection);
-    delete mBooks;
+
+    ManageDigiLibBooks.userRequestProcessor(userSelection);
 }
 
 int main(int argc, char *argv[]){
