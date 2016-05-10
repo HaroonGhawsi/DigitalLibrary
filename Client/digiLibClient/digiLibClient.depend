@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1462884535 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/main.cpp
+	<iostream>
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	"user.h"
+	<vector>
+	<string>
+
+1462884835 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+
+1462884850 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+	<iostream>
+	<string>
+	<vector>
+	"digiLibBook.h"
+
+1462884571 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/user.h
+	"manageDigiLibBook.h"
+
+1462885063 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+	"manageDigiLibBook.h"
+	"digiLibBook.h"
+	<string>
+	<vector>
+
+1462884558 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/user.cpp
+	"user.h"
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	<string>
+	<iostream>
+
+1462885398 source:/home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp
+	<iostream>
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	"user.h"
+	<vector>
+	<string>
+
+1462884835 /home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+
+1462888576 /home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+	<iostream>
+	<string>
+	<vector>
+	"digiLibBook.h"
+
+1462885314 /home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/include/user.h
+	"manageDigiLibBook.h"
+
+1462889715 source:/home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp
+	"user.h"
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	<string>
+	<iostream>
+
+1462889853 source:/home/haroon01/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+	"manageDigiLibBook.h"
+	"digiLibBook.h"
+	<string>
+	<vector>
+

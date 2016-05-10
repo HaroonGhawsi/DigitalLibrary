@@ -1,0 +1,25 @@
+#ifndef MANAGEDIGILIBBOOK_H
+#define MANAGEDIGILIBBOOK_H
+
+#include <string>
+#include <iostream>
+#include "manageDigiLibBook.h"
+
+class manageDigiLibBook
+{
+    public:
+        manageDigiLibBook();
+        virtual ~manageDigiLibBook();
+
+        std::string addNewBook();
+    	std::string showBookList();
+	std::string modifyBook();
+    	std::string markBookBorrowed();
+    	std::string showBorrowedBook();
+
+
+    protected:
+    private:
+};
+
+#endif // MANAGEDIGILIBBOOK_H

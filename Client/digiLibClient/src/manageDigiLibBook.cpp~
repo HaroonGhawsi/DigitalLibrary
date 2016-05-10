@@ -1,0 +1,17 @@
+#include "manageDigiLibBook.h"
+#include "digiLibBook.h"
+#include <string>
+#include <vector>
+
+
+manageDigiLibBook::manageDigiLibBook(){}
+
+manageDigiLibBook::manageDigiLibBook(std::string bt, ba, bisb, bpuby){
+
+    bookTitle = bt;
+    bookAuthor = ba;
+    bookISBN = bisb;
+    bookPublishYear = bpuby;
+}
+
+manageDigiLibBook::~manageDigiLibBook(){}

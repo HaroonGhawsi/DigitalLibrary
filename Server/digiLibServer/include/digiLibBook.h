@@ -1,0 +1,20 @@
+#ifndef DIGILIBBOOK_H
+#define DIGILIBBOOK_H
+
+
+class digiLibBook
+{
+    public:
+        digiLibBook();
+        virtual ~digiLibBook();
+
+    std::string bookTitle;
+    std::string bookAuthor;
+    std::string bookISBN;
+    std::string bookPublishYear;
+
+    protected:
+    private:
+};
+
+#endif // DIGILIBBOOK_H

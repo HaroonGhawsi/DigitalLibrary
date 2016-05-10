@@ -1,0 +1,14 @@
+ - Add Book from ManagedigiLibBook class directly to Server.
+	--Communication with Server is needed.
+ 	--Books should be Serialized by boost library
+	--Json format is good to save the book details in client.
+	--Send the Json object to server
+	--Server should parse Json object by deserialization of boost
+	--Save data in memory of Server.
+	
+
+- DigiLibClient
+	--Server communication should be implemented
+	--Client should be able to add new book to server
+	--Serialize the book data 
+	--

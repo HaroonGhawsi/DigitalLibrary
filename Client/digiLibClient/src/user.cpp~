@@ -1,0 +1,39 @@
+#include "user.h"
+#include "digiLibBook.h"
+#include "manageDigiLibBook.h"
+#include <string>
+#include <iostream>
+
+void user::showMainMenu()
+{
+	char choice[10];
+
+	std::cout << "\n\t Digital Library\n";
+
+	while (choice[10] != '0')
+	{
+		std::cout << "\n\t------------Main Menu------------\n";
+		std::cout << "\n\t|				                   |";
+		std::cout << "\n\t|	(1)Add New Book		           |";
+		std::cout << "\n\t|	(2)Show List of Books	       |";
+		std::cout << "\n\t|	(3)Modify Book		           |";
+		std::cout << "\n\t|	(4)Mark Books as Borrowed      |";
+		std::cout << "\n\t|	(5)Show list of Borrowed       |";
+		std::cout << "\n\t|				                   |";
+		std::cout << "\n\t---------------------------------\n";
+		std::cout << "\n\t";
+		std::cin >>choice;
+
+		switch(choice[0])
+        {
+            case '1' : m_lib.addNewBook(); break;
+            case '2' : m_lib.showBookList(); break;
+            //case '3' : modifyBook(); break;
+            //case '4' : markBookBorrowed(); break;
+            //case '5' : showListOfBorrowedBooks(); break;
+            case '0' : std::cout << "\n\tExiting Main Menu..."; break;
+            default : "\n\tInvalid Input";
+        }
+
+    }
+}

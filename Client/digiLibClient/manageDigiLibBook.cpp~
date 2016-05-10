@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include "digiLibBook.h"
+#include "manageDigiLibBook.h"
+
+std::string manageDigiLibBook::addNewBook(){
+
+    digiLibBook newBook;
+
+    std::cout << "**********************************************\n";
+    std::cout << "Please enter New Book Title\n";
+    getline(std::cin, newBook.bookTitle);
+    std::cout << "Please enter New Book Author\n";
+    getline(std::cin, newBook.bookAuthor);
+    std::cout << "Please enter New Book ISBN\n";
+    getline(std::cin, newBook.bookISBN);
+    std::cout << "Please enter New Book Publish Year\n";
+    getline(std::cin, newBook.bookPublishYear);
+
+
+}

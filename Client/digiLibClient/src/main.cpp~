@@ -1,0 +1,14 @@
+#include <iostream>
+#include "../include/digiLibBook.h"
+#include "../include/manageDigiLibBook.h"
+
+
+int main()
+{	
+	digiLibBook newbook1;
+	manageDigiLibBook mbObj;
+	mbObj.addNewBook();
+
+	std::cout << newbook1.bookTitle << std::endl;
+	return 0;
+}
