@@ -4,10 +4,6 @@
 #include <vector>
 
 
-//manageDigiLibBook::manageDigiLibBook(){}
-
-//manageDigiLibBook::~manageDigiLibBook(){}
-
 void manageDigiLibBook::addNewBook(){
 
     digiLibBook bObj;
@@ -39,6 +35,7 @@ void manageDigiLibBook::showBookList(){
 		std::cout << "\tBook ISBN:            " << bObj.bookISBN << std::endl;
 		std::cout << "\tBook Publish Year:    " << bObj.bookPublishYear << std::endl;
 		std::cout << "\t****************************************************" << std::endl;
+		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }
@@ -49,5 +46,7 @@ void manageDigiLibBook::modifyBook(){
            for(int i=0; i<size; i++){
 
         std::cout << "\t" << i << " " << "\tBook Title:        " << myBook[i].bookTitle << std::endl;
-           }
+        }
+
+
 }

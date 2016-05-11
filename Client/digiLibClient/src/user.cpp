@@ -8,7 +8,7 @@ void user::showMainMenu()
 {
 	char choice[10];
 
-	std::cout << "\n\t Digital Library\n";
+	std::cout << "\n\t\t Digital Library\n";
 
 	while (choice[10] != '0')
 	{
