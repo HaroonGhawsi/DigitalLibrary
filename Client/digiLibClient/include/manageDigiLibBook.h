@@ -13,7 +13,7 @@ class manageDigiLibBook
     	void showBookList();
         void modifyBook();
     	void markBookBorrowed();
-    	//std::string showBorrowedBook();
+    	void showListOfBorrowedBooks();
 
 
     protected:

@@ -9,7 +9,7 @@
 
 1463048779 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
 
-1463045229 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+1463075997 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
 	<iostream>
 	<string>
 	<vector>
@@ -18,14 +18,14 @@
 1462967451 /home/haroon01/DigitalLibrary/Client/digiLibClient/include/user.h
 	"manageDigiLibBook.h"
 
-1463043984 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+1463076006 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
 	"manageDigiLibBook.h"
 	"digiLibBook.h"
 	"user.h"
 	<string>
 	<vector>
 
-1463045835 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/user.cpp
+1463076023 source:/home/haroon01/DigitalLibrary/Client/digiLibClient/src/user.cpp
 	"user.h"
 	"digiLibBook.h"
 	"manageDigiLibBook.h"

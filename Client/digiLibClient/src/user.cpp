@@ -33,7 +33,7 @@ void user::showMainMenu()
             case '2' : m_lib.showBookList(); break;
             case '3' : m_lib.modifyBook(); break;
             case '4' : m_lib.markBookBorrowed(); break;
-            //case '5' : showListOfBorrowedBooks(); break;
+            case '5' : m_lib.showListOfBorrowedBooks(); break;
             case '0' : std::cout << "\n\tExiting Main Menu..."; break;
             default : "\n\tInvalid Input";
         }
