@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 
+
 void user::showMainMenu()
 {
 	char choice[10];
@@ -19,21 +20,22 @@ void user::showMainMenu()
 		std::cout << "\n\t|	(3)Modify Book		   |";
 		std::cout << "\n\t|	(4)Mark Books as Borrowed  |";
 		std::cout << "\n\t|	(5)Show list of Borrowed   |";
+		std::cout << "\n\t|	(0)Exit Main Menu   |";
 		std::cout << "\n\t|				   |";
 		std::cout << "\n\t---------------------------------\n";
 		std::cout << "\n\t";
 		std::cin >>choice;
+		std::cout << std::endl;
 
 		switch(choice[0])
         {
             case '1' : m_lib.addNewBook(); break;
             case '2' : m_lib.showBookList(); break;
             case '3' : m_lib.modifyBook(); break;
-            //case '4' : markBookBorrowed(); break;
+            case '4' : m_lib.markBookBorrowed(); break;
             //case '5' : showListOfBorrowedBooks(); break;
             case '0' : std::cout << "\n\tExiting Main Menu..."; break;
             default : "\n\tInvalid Input";
         }
-
     }
 }

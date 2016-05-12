@@ -12,7 +12,7 @@ class manageDigiLibBook
         void addNewBook();
     	void showBookList();
         void modifyBook();
-    	//std::string markBookBorrowed();
+    	void markBookBorrowed();
     	//std::string showBorrowedBook();
 
 

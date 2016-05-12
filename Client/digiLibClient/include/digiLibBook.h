@@ -10,6 +10,8 @@ class digiLibBook
         std::string bookAuthor;
         std::string bookISBN;
         std::string bookPublishYear;
+        std::string bookBorrowed;
+        std::string bookAvailable;
 };
 
 #endif // DIGILIBBOOK_H
