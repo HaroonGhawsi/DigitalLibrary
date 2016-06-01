@@ -31,11 +31,14 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/digiLibBook.h" />
+		<Unit filename="include/digiLibData.h" />
 		<Unit filename="include/digiLibServer.h" />
+		<Unit filename="src/digiLibData.cpp" />
 		<Unit filename="src/digiLibServer.cpp" />
 		<Extensions>
 			<code_completion />

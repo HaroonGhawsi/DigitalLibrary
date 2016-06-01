@@ -1,6 +1,8 @@
 #ifndef DIGILIBBOOK_H
 #define DIGILIBBOOK_H
 
+#include <string>
+
 
 class digiLibBook
 {

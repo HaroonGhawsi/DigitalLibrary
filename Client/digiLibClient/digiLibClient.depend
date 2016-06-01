@@ -64,3 +64,36 @@
 	<string>
 	<vector>
 
+1464702074 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp
+	<iostream>
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	"user.h"
+	<vector>
+	<string>
+
+1464694589 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+
+1464518812 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+	<iostream>
+	<string>
+	<vector>
+	"digiLibBook.h"
+
+1464518812 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/user.h
+	"manageDigiLibBook.h"
+
+1464694696 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+	"manageDigiLibBook.h"
+	"digiLibBook.h"
+	"user.h"
+	<string>
+	<vector>
+
+1464701520 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp
+	"user.h"
+	"digiLibBook.h"
+	"manageDigiLibBook.h"
+	<string>
+	<iostream>
+

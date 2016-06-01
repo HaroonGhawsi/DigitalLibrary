@@ -13,18 +13,21 @@ void manageDigiLibBook::addNewBook(){
     //Print book details and get the user input
 
     std::cout << "\n\n\t------------Add New Book------------";
-	std::cout << "\n\tBook Title: ";
+	std::cout << "\n\tBook Title:           ";
 	std::cin.ignore();
 	getline(std::cin, bObj.bookTitle);
-	std::cout << "\tBook Author: ";
+	std::cout << "\tBook Author:            ";
 	getline(std::cin, bObj.bookAuthor);
-	std::cout << "\tBook ISBN: ";
+	std::cout << "\tBook ISBN:              ";
 	getline(std::cin, bObj.bookISBN);
-	std::cout << "\tBook Publish Year: ";
+	std::cout << "\tBook Publish Year:      ";
 	getline(std::cin, bObj.bookPublishYear);
 
     //Save the input to the myBook vector
 	myBook.push_back(bObj);
+
+	//std::string serialize = bObj.serialize();
+
 
 };
 void manageDigiLibBook::showBookList(){
@@ -103,7 +106,13 @@ void manageDigiLibBook::showListOfBorrowedBooks(){
 
     for(int i=0; i<size; i++){
 
-        std::cout << "\t" << i << " " << "\tBook Title:         " << myBook[i].bookTitle << " " << myBook[i].bookBorrowed << std::endl;
+        //std::cout << "\t" << i << " " << "\tBook Title:         " << myBook[i].bookTitle << " " << myBook[i].bookBorrowed << std::endl;
+
+        if(myBook[i].bookBorrowed == "b" || myBook[i].bookBorrowed == "B"){
+
+                std::cout << "\t" << i << " " << "\tBook Title:         " << myBook[i].bookTitle << std::endl;
+
+        }
     }
 }
 

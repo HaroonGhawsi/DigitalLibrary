@@ -7,11 +7,11 @@
 
 void user::showMainMenu()
 {
-	char choice[10];
+	char choice[6];
 
 	std::cout << "\n\t\t Digital Library\n";
 
-	while (choice[10] != '0')
+	while (choice[0] != '0')
 	{
 		std::cout << "\n\t------------Main Menu------------\n";
 		std::cout << "\n\t|				   |";
@@ -34,8 +34,10 @@ void user::showMainMenu()
             case '3' : m_lib.modifyBook(); break;
             case '4' : m_lib.markBookBorrowed(); break;
             case '5' : m_lib.showListOfBorrowedBooks(); break;
-            case '0' : std::cout << "\n\tExiting Main Menu..."; break;
+            case '0' : std::cout << "\n\tExiting Main Menu..." << std::endl;
+                        break;
             default : "\n\tInvalid Input";
         }
     }
+
 }
