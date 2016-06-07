@@ -14,8 +14,7 @@
 
 int main(int argc, char* argv[]){
 
-    user uObj;
-    uObj.showMainMenu();
+
 
     try{
 
@@ -42,6 +41,10 @@ int main(int argc, char* argv[]){
 
     std::string const received_message(recv_buf.data(), len);
     std::cout << "received from server: \"" << received_message << "\"" << std::endl;
+
+    user uObj;
+    uObj.showMainMenu();
+
     }
     catch (std::exception const &e){
 

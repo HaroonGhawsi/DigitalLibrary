@@ -3,15 +3,24 @@
 #include "user.h"
 #include <string>
 #include <vector>
+#include <sstream>
 #include <boost/serialization/vector.hpp>
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
+#include <boost/asio.hpp>
+#include <boost/asio/buffer.hpp>
+#include <boost/asio/io_service.hpp>
+#include <boost/asio/ip/tcp.hpp>
+
 
 
 void manageDigiLibBook::addNewBook(){
 
     //initialize digiLibBook Object.
     digiLibBook bObj;
+
+    std::stringstream ss;
+    typedef boost::asio::ip::tcp asiotcp;
 
     //Print book details and get the user input
 
@@ -28,6 +37,26 @@ void manageDigiLibBook::addNewBook(){
 
     //Save the input to the myBook vector
 	myBook.push_back(bObj);
+
+
+    boost::archive::text_oarchive t{ss};
+
+    t << bObj;
+    std::cout << "Serialized the book ";
+
+    std::string output = ss.str();
+    std::cout << output << std::endl;
+
+    boost::asio::io_service io_service;
+    asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+
+    asiotcp::socket socket(io_service);
+    socket.open(asiotcp::v4());
+    socket.connect(server_endpoint);
+    socket.send(boost::asio::buffer(output));
+
+
+
 
 	//Serialization implementation
     //socket....

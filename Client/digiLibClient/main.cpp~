@@ -14,8 +14,7 @@
 
 int main(int argc, char* argv[]){
 
-    user uObj;
-    uObj.showMainMenu();
+
 
     try{
 
@@ -37,11 +36,14 @@ int main(int argc, char* argv[]){
     std::string const send_buf = "Hello DigiLibServer";
     socket.send(boost::asio::buffer(send_buf));
 
+    user uObj;
+    uObj.showMainMenu();
+
     std::array<char, 128> recv_buf;
     size_t const len = socket.receive(boost::asio::buffer(recv_buf));
 
     std::string const received_message(recv_buf.data(), len);
-    std::cout << "received from server: " \"" << received_message << "\"" << std::endl;
+    std::cout << "received from server: \"" << received_message << "\"" << std::endl;
     }
     catch (std::exception const &e){
 

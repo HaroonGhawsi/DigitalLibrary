@@ -10,28 +10,27 @@
 cmake_minimum_required (VERSION 3.0.2)
 
 
-project (DigiLibClient)
+
+project (digiLibServer)
 
 SET(CMAKE_CXX_FLAGS "-std=c++11")
 
-# tcpclient
+# tcpserver
+set(EXEC_NAME "digiLibServer")
 
-set(EXEC_NAME "digiLibClient")
-
-add_executable(${EXEC_NAME} main.cpp src/user.cpp src/manageDigiLibBook.cpp )
+add_executable(${EXEC_NAME} digiLibServer/src/digiLibServer.cpp)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD 11)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD_REQUIRED true)
 
 # internal list of mandatory boost components
-SET(BOOST_MANDATORY_COMPONENTS system serialization)
+SET(BOOST_MANDATORY_COMPONENTS system)
 
 find_package(Boost "1.52.0" COMPONENTS ${BOOST_MANDATORY_COMPONENTS} REQUIRED)
 
 # add include path for boost to the compiler
 include_directories(${Boost_INCLUDE_DIRS})
+
 target_link_libraries(${EXEC_NAME} ${Boost_SYSTEM_LIBRARY})
-target_link_libraries(${EXEC_NAME} ${Boost_SERIALIZATION_LIBRARY})
 
 
-include_directories(include)
 

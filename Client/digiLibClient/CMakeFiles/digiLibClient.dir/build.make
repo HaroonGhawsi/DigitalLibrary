@@ -132,6 +132,7 @@ digiLibClient: CMakeFiles/digiLibClient.dir/src/user.cpp.o
 digiLibClient: CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o
 digiLibClient: CMakeFiles/digiLibClient.dir/build.make
 digiLibClient: /usr/lib/x86_64-linux-gnu/libboost_system.so
+digiLibClient: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
 digiLibClient: CMakeFiles/digiLibClient.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable digiLibClient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/digiLibClient.dir/link.txt --verbose=$(VERBOSE)
