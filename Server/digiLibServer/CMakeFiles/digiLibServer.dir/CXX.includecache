@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp
+iostream
+-
+string
+-
+memory
+-
+boost/asio/buffer.hpp
+-
+boost/asio/io_service.hpp
+-
+boost/asio/ip/tcp.hpp
+-
+

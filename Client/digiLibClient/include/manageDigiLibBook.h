@@ -4,10 +4,16 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <boost/serialization/vector.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 #include "digiLibBook.h"
+
 
 class manageDigiLibBook
 {
+
+
     public:
         void addNewBook();
     	void showBookList();
@@ -17,8 +23,14 @@ class manageDigiLibBook
 
 
     protected:
+
     std::vector<digiLibBook> myBook;
+
+
+
     private:
+
+
 };
 
 

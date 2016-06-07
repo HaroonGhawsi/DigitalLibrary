@@ -3,6 +3,9 @@
 #include "user.h"
 #include <string>
 #include <vector>
+#include <boost/serialization/vector.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 
 
 void manageDigiLibBook::addNewBook(){
@@ -13,7 +16,7 @@ void manageDigiLibBook::addNewBook(){
     //Print book details and get the user input
 
     std::cout << "\n\n\t------------Add New Book------------";
-	std::cout << "\n\tBook Title:           ";
+	std::cout << "\n\tBook Author:            ";
 	std::cin.ignore();
 	getline(std::cin, bObj.bookTitle);
 	std::cout << "\tBook Author:            ";
@@ -26,8 +29,10 @@ void manageDigiLibBook::addNewBook(){
     //Save the input to the myBook vector
 	myBook.push_back(bObj);
 
-	//std::string serialize = bObj.serialize();
-
+	//Serialization implementation
+    //socket....
+    //boost::archive::text_oarchive ar(socket);
+    //ar & bObj;
 
 };
 void manageDigiLibBook::showBookList(){
@@ -38,7 +43,7 @@ void manageDigiLibBook::showBookList(){
     //iterate through vector and display the entered data from vector.
 
     for (auto &bObj : myBook) {
-		std::cout << "\tBook Title:           " << bObj.bookTitle << std::endl;
+		std::cout << "\tBook Title:           " << bObj.bookTitle << " " << bObj.bookBorrowed << std::endl;
 		std::cout << "\tBook Author:          " << bObj.bookAuthor << std::endl;
 		std::cout << "\tBook ISBN:            " << bObj.bookISBN << std::endl;
 		std::cout << "\tBook Publish Year:    " << bObj.bookPublishYear << std::endl;

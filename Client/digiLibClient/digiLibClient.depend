@@ -64,33 +64,40 @@
 	<string>
 	<vector>
 
-1464702074 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp
+1465039743 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp
 	<iostream>
 	"digiLibBook.h"
 	"manageDigiLibBook.h"
 	"user.h"
 	<vector>
 	<string>
+	<boost/asio.hpp>
 
-1464694589 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+1464854443 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
 
-1464518812 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+1465257321 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
 	<iostream>
 	<string>
 	<vector>
+	<boost/serialization/vector.hpp>
+	<boost/archive/text_oarchive.hpp>
+	<boost/archive/text_iarchive.hpp>
 	"digiLibBook.h"
 
 1464518812 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/user.h
 	"manageDigiLibBook.h"
 
-1464694696 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+1465039504 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
 	"manageDigiLibBook.h"
 	"digiLibBook.h"
 	"user.h"
 	<string>
 	<vector>
+	<boost/serialization/vector.hpp>
+	<boost/archive/text_oarchive.hpp>
+	<boost/archive/text_iarchive.hpp>
 
-1464701520 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp
+1465037488 source:/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp
 	"user.h"
 	"digiLibBook.h"
 	"manageDigiLibBook.h"

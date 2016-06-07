@@ -1,4 +1,4 @@
-# Install script for directory: /home/haroon01/DigitalLibrary/Server/digiLibServer
+# Install script for directory: /home/haroonghawsi/DigitalLibrary/Server/digiLibServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/haroon01/DigitalLibrary/Server/digiLibServer/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+file(WRITE "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/${CMAKE_INSTALL_MANIFEST}" "")
+foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  file(APPEND "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+endforeach()

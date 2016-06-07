@@ -27,7 +27,7 @@ int main(){
 
             asiotcp::socket socket(io_service);
 
-            asiotcp::acceptor a(io_service, asiotcp::endpoint(asiotcp::v4(), 8080));
+            asiotcp::acceptor a(io_service, asiotcp::endpoint(asiotcp::v4(), 4000));
             a.accept(socket);
 
             std::array<char, 256> recv_buf;
@@ -36,7 +36,7 @@ int main(){
 
             std::string const inputmessage(recv_buf.data(), received_bytes);
             std::cout << "client sent message: \"" << inputmessage << "\"" << std::endl;
-            std::string const message = "Hello Client. \n";
+            std::string const message = "Hello DigiLibClient. \n";
             socket.send(boost::asio::buffer(message));
             }
         }

@@ -1,0 +1,1 @@
+/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir

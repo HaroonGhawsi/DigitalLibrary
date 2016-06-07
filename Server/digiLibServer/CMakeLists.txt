@@ -7,19 +7,30 @@
 
 # the property CXX_STANDARD is first mentioned in cmake 3.1.3
 
-#cmake_minimum_required (VERSION 3.1.3)
-
-SET(CMAKE_CXX_FLAGS "--std=c++11")
-
-project (DigiLibServer)
+cmake_minimum_required (VERSION 3.0.2)
 
 
-# tcpechoserver
+
+project (digiLibServer)
+
+SET(CMAKE_CXX_FLAGS "-std=c++11")
+
+# tcpserver
 set(EXEC_NAME "digiLibServer")
 
-add_executable(${EXEC_NAME} /digiLibServer/src/digiLibServer.cpp)
+add_executable(${EXEC_NAME} src/digiLibServer.cpp)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD 11)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD_REQUIRED true)
+
+# internal list of mandatory boost components
+SET(BOOST_MANDATORY_COMPONENTS system)
+
+find_package(Boost "1.52.0" COMPONENTS ${BOOST_MANDATORY_COMPONENTS} REQUIRED)
+
+# add include path for boost to the compiler
+include_directories(${Boost_INCLUDE_DIRS})
+
 target_link_libraries(${EXEC_NAME} ${Boost_SYSTEM_LIBRARY})
+
 
 
