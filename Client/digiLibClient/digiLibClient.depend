@@ -73,9 +73,12 @@
 	<string>
 	<boost/asio.hpp>
 
-1464854443 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+1465304861 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/digiLibBook.h
+	<boost/serialization/vector.hpp>
+	<boost/archive/text_oarchive.hpp>
+	<boost/archive/text_iarchive.hpp>
 
-1465257321 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
+1465302490 /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/include/manageDigiLibBook.h
 	<iostream>
 	<string>
 	<vector>

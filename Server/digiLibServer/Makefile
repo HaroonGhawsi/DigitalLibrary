@@ -115,6 +115,30 @@ digiLibServer/fast:
 	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/build
 .PHONY : digiLibServer/fast
 
+src/digiLibData.o: src/digiLibData.cpp.o
+.PHONY : src/digiLibData.o
+
+# target to build an object file
+src/digiLibData.cpp.o:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o
+.PHONY : src/digiLibData.cpp.o
+
+src/digiLibData.i: src/digiLibData.cpp.i
+.PHONY : src/digiLibData.i
+
+# target to preprocess a source file
+src/digiLibData.cpp.i:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.i
+.PHONY : src/digiLibData.cpp.i
+
+src/digiLibData.s: src/digiLibData.cpp.s
+.PHONY : src/digiLibData.s
+
+# target to generate assembly for a file
+src/digiLibData.cpp.s:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.s
+.PHONY : src/digiLibData.cpp.s
+
 src/digiLibServer.o: src/digiLibServer.cpp.o
 .PHONY : src/digiLibServer.o
 
@@ -148,6 +172,9 @@ help:
 	@echo "... digiLibServer"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/digiLibData.o"
+	@echo "... src/digiLibData.i"
+	@echo "... src/digiLibData.s"
 	@echo "... src/digiLibServer.o"
 	@echo "... src/digiLibServer.i"
 	@echo "... src/digiLibServer.s"

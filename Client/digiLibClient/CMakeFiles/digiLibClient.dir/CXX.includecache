@@ -6,24 +6,20 @@
 
 #IncludeRegexTransform: 
 
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
-manageDigiLibBook.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.h
-digiLibBook.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/digiLibBook.h
-user.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.h
-string
+/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp
+iostream
 -
+digiLibBook.h
+/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/digiLibBook.h
+manageDigiLibBook.h
+/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/manageDigiLibBook.h
+user.h
+/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/user.h
 vector
 -
-sstream
+memory
 -
-boost/serialization/vector.hpp
--
-boost/archive/text_oarchive.hpp
--
-boost/archive/text_iarchive.hpp
+string
 -
 boost/asio.hpp
 -

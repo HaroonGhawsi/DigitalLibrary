@@ -20,12 +20,13 @@ void manageDigiLibBook::addNewBook(){
     digiLibBook bObj;
 
     std::stringstream ss;
+
     typedef boost::asio::ip::tcp asiotcp;
 
     //Print book details and get the user input
 
     std::cout << "\n\n\t------------Add New Book------------";
-	std::cout << "\n\tBook Author:            ";
+	std::cout << "\n\tBook Title:            ";
 	std::cin.ignore();
 	getline(std::cin, bObj.bookTitle);
 	std::cout << "\tBook Author:            ";
@@ -36,16 +37,17 @@ void manageDigiLibBook::addNewBook(){
 	getline(std::cin, bObj.bookPublishYear);
 
     //Save the input to the myBook vector
-	myBook.push_back(bObj);
+	//myBook.push_back(bObj);
 
 
-    boost::archive::text_oarchive t{ss};
+    boost::archive::text_oarchive oa{ss};
+    oa << bObj;
 
-    t << bObj;
-    std::cout << "Serialized the book ";
+    //std::cout << "Serialized the book ";
 
     std::string output = ss.str();
-    std::cout << output << std::endl;
+
+    //std::cout << output << std::endl; //Output Serialized data
 
     boost::asio::io_service io_service;
     asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
@@ -55,13 +57,6 @@ void manageDigiLibBook::addNewBook(){
     socket.connect(server_endpoint);
     socket.send(boost::asio::buffer(output));
 
-
-
-
-	//Serialization implementation
-    //socket....
-    //boost::archive::text_oarchive ar(socket);
-    //ar & bObj;
 
 };
 void manageDigiLibBook::showBookList(){

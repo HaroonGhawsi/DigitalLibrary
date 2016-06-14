@@ -18,19 +18,21 @@ SET(CMAKE_CXX_FLAGS "-std=c++11")
 # tcpserver
 set(EXEC_NAME "digiLibServer")
 
-add_executable(${EXEC_NAME} digiLibServer/src/digiLibServer.cpp)
+add_executable(${EXEC_NAME} src/digiLibServer.cpp src/digiLibData.cpp)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD 11)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD_REQUIRED true)
 
 # internal list of mandatory boost components
-SET(BOOST_MANDATORY_COMPONENTS system)
+SET(BOOST_MANDATORY_COMPONENTS system serialization)
 
 find_package(Boost "1.52.0" COMPONENTS ${BOOST_MANDATORY_COMPONENTS} REQUIRED)
 
 # add include path for boost to the compiler
 include_directories(${Boost_INCLUDE_DIRS})
-
 target_link_libraries(${EXEC_NAME} ${Boost_SYSTEM_LIBRARY})
+target_link_libraries(${EXEC_NAME} ${Boost_SERIALIZATION_LIBRARY})
+
+include_directories(include)
 
 
 

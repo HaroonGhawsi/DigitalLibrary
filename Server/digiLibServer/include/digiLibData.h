@@ -2,7 +2,7 @@
 #define DIGILIBDATA_H
 
 #include "digiLibBook.h"
-#include <map>
+#include <vector>
 
 
 class digiLibData
@@ -11,7 +11,7 @@ class digiLibData
         digiLibData();
         virtual ~digiLibData();
 
-        void saveNewBookToMemory();
+        void saveNewBookToMemory(std::string);
         void updateBookInMemory();
         void showAllBooksFromMemory();
         void markBookBorrowedInMemory();
@@ -22,7 +22,7 @@ class digiLibData
 
     private:
 
-    static std::map<int, digiLibBook> serverData;
+    std::vector<digiLibBook> serverData;
 
 
 };

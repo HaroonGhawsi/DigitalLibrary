@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
     socket.open(asiotcp::v4());
 
     socket.connect(server_endpoint);
-    std::string const send_buf = "Hello DigiLibServer";
+    std::string const send_buf = "Hello Digital Library Server";
     socket.send(boost::asio::buffer(send_buf));
 
     std::array<char, 128> recv_buf;

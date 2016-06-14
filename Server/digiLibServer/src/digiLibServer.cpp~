@@ -1,13 +1,11 @@
+
 #include <iostream>
 #include <string>
 #include <memory>
 #include <boost/asio/buffer.hpp>
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/ip/tcp.hpp>
-#include <boost/archive/text_iarchive.hpp>
-#include "digiLibData.h"
-#include "digiLibBook.h"
-
+//#include "digiLibServer.h"
 
 
 class digiLibServer
@@ -15,19 +13,15 @@ class digiLibServer
     public:
         digiLibServer();
         virtual ~digiLibServer();
-
     protected:
     private:
 };
 
 int main(){
 
-    digiLibData dbData;
-
     try{
         typedef boost::asio::ip::tcp asiotcp;
         boost::asio::io_service io_service;
-
 
         while(true){
 
@@ -41,16 +35,9 @@ int main(){
             std::size_t const received_bytes = socket.receive(boost::asio::buffer(recv_buf));
 
             std::string const inputmessage(recv_buf.data(), received_bytes);
-
-
-            std::cout << "client sent message: \"" << inputmessage << "\"" << std::endl;
-
-
-
-            dbData.saveNewBookToMemory(inputmessage);
-
-            std::string const message = "Hello Digital Library Client. \n";
-            socket.send(boost::asio::buffer(message));
+            //std::cout << "client sent message: \"" << inputmessage << "\"" << std::endl;
+            //std::string const message = "Hello DigiLibClient. \n";
+            //socket.send(boost::asio::buffer(message));
 
 
             }
@@ -62,4 +49,3 @@ int main(){
     }
     return 0;
 }
-
