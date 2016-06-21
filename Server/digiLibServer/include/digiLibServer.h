@@ -7,6 +7,8 @@ class digiLibServer
     public:
         digiLibServer();
         virtual ~digiLibServer();
+
+
     protected:
     private:
 };

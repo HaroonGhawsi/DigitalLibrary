@@ -9,4 +9,11 @@ CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o: include/digiLibServer.h
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: src/digiLibServer.cpp
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: include/digiLibBook.h
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: include/digiLibData.h
+CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: include/manageServer.h
+
+CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o: src/manageServer.cpp
+CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o: include/digiLibBook.h
+CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o: include/digiLibData.h
+CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o: include/digiLibServer.h
+CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o: include/manageServer.h
 

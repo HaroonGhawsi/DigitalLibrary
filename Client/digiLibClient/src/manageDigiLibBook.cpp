@@ -38,26 +38,17 @@ void manageDigiLibBook::addNewBook(){
 
     //Save the input to the myBook vector
 	//myBook.push_back(bObj);
-
-
     boost::archive::text_oarchive oa{ss};
     oa << bObj;
-
     //std::cout << "Serialized the book ";
-
     std::string output = ss.str();
-
     //std::cout << output << std::endl; //Output Serialized data
-
     boost::asio::io_service io_service;
     asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
-
     asiotcp::socket socket(io_service);
     socket.open(asiotcp::v4());
     socket.connect(server_endpoint);
     socket.send(boost::asio::buffer(output));
-
-
 };
 void manageDigiLibBook::showBookList(){
 

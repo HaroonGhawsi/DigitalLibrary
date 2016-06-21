@@ -12,8 +12,8 @@ class digiLibData
         virtual ~digiLibData();
 
         void saveNewBookToMemory(std::string);
-        void updateBookInMemory();
         void showAllBooksFromMemory();
+        void updateBookInMemory();
         void markBookBorrowedInMemory();
         void showAllBorrowedBooksFromMemory();
 

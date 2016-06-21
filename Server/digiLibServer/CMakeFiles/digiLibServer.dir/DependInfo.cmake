@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp" "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
   "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp" "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o"
+  "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/manageServer.cpp" "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/manageServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

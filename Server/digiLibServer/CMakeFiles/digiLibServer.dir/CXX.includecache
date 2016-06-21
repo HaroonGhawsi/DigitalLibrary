@@ -21,6 +21,8 @@ sstream
 -
 boost/archive/text_iarchive.hpp
 -
+boost/archive/text_oarchive.hpp
+-
 boost/asio/ip/tcp.hpp
 -
 boost/serialization/vector.hpp
