@@ -13,14 +13,13 @@
 #include <boost/asio/ip/tcp.hpp>
 
 
-
+digiLibBook bObj;
 void manageDigiLibBook::addNewBook(){
 
     //initialize digiLibBook Object.
-    digiLibBook bObj;
+
 
     std::stringstream ss;
-
     typedef boost::asio::ip::tcp asiotcp;
 
     //Print book details and get the user input
@@ -66,6 +65,23 @@ void manageDigiLibBook::showBookList(){
 		std::cout << std::endl;
 	}
         std::cout << std::endl;
+
+    typedef boost::asio::ip::tcp asiotcp;
+    std::stringstream ss;
+
+    boost::archive::text_oarchive oa{ss};
+    oa << bObj;
+
+    std::string output = ss.str();
+
+    boost::asio::io_service io_service;
+    asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+    asiotcp::socket socket(io_service);
+    socket.open(asiotcp::v4());
+    socket.connect(server_endpoint);
+    socket.send(boost::asio::buffer(output));
+
+    //std::cout << "client response show list of Books" << output << std::endl;
 }
 void manageDigiLibBook::modifyBook(){
 

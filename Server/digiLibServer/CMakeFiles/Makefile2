@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/haroonghawsi/DigitalLibrary/Server/digiLibServer
 CMakeFiles/digiLibServer.dir/all:
 	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/depend
 	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles  1 2 3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles  1 2
 	@echo "Built target digiLibServer"
 .PHONY : CMakeFiles/digiLibServer.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/digiLibServer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/digiLibServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/digiLibServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles 0
 .PHONY : CMakeFiles/digiLibServer.dir/rule

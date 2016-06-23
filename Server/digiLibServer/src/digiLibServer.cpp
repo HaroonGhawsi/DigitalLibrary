@@ -7,7 +7,7 @@
 #include <boost/archive/text_iarchive.hpp>
 #include "digiLibData.h"
 #include "digiLibBook.h"
-#include "manageServer.h"
+
 
 
 
@@ -35,15 +35,16 @@ int main(){
             a.accept(socket);
             std::array<char, 256> recv_buf;
             std::size_t const received_bytes = socket.receive(boost::asio::buffer(recv_buf));
-            std::string inputmessage(recv_buf.data(), received_bytes);
+            std::string const inputmessage(recv_buf.data(), received_bytes);
             std::cout << "client sent message: \"" << inputmessage << "\"" << std::endl;
-
-            /*manageServer ms;
-            ms.manageClientCalls(inputmessage);*/
 
             digiLibData dbData;
             dbData.saveNewBookToMemory(inputmessage);
-            dbData.showAllBooksFromMemory(socket);
+            //dbData.showAllBooksFromMemory();
+            //std::cout << "Server Testing" << inputmessage << std::endl;
+
+            dbData.showAllBooksFromMemory();
+
             std::string const message = "Hello Digital Library Client. \n";
             socket.send(boost::asio::buffer(message));
 
