@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haroonghawsi/DigitalLibrary/Client/digiLibClient
+CMAKE_SOURCE_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haroonghawsi/DigitalLibrary/Client/digiLibClient
+CMAKE_BINARY_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient
 
 #=============================================================================
 # Target rules for target CMakeFiles/digiLibClient.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/haroonghawsi/DigitalLibrary/Client/digiLibClient
 CMakeFiles/digiLibClient.dir/all:
 	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/depend
 	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles  1 2 3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles  1 2 3
 	@echo "Built target digiLibClient"
 .PHONY : CMakeFiles/digiLibClient.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/digiLibClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/digiLibClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/digiLibClient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles 0
 .PHONY : CMakeFiles/digiLibClient.dir/rule
 
 # Convenience name for target.

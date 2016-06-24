@@ -13,11 +13,24 @@
 #include <boost/asio/ip/tcp.hpp>
 
 
+void dumpBook(digiLibBook const &odb)
+
+{
+ std::ostream &os = std::cout;
+ os << "\n******************************************" << std::endl;
+ os << "Book Title:         " << odb.bookTitle << std::endl;
+ os << "Book Author:        " << odb.bookAuthor << std::endl;
+ os << "Book ISBN:          " << odb.bookISBN << std::endl;
+ os << "Book Publish Year:  " << odb.bookPublishYear << std::endl;
+ os << "******************************************" << std::endl;
+
+}
+
+
 digiLibBook bObj;
 void manageDigiLibBook::addNewBook(){
 
     //initialize digiLibBook Object.
-
 
     std::stringstream ss;
     typedef boost::asio::ip::tcp asiotcp;
@@ -40,40 +53,37 @@ void manageDigiLibBook::addNewBook(){
     boost::archive::text_oarchive oa{ss};
     oa << bObj;
     //std::cout << "Serialized the book ";
-    std::string output = ss.str();
-    //std::cout << output << std::endl; //Output Serialized data
+    std::string output = ss.str() + "+"+"1";
+
+   // std::cout << output << std::endl; //Output Serialized data
+
     boost::asio::io_service io_service;
     asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
     asiotcp::socket socket(io_service);
     socket.open(asiotcp::v4());
     socket.connect(server_endpoint);
     socket.send(boost::asio::buffer(output));
+
+
+    std::array<char, 128> recv_buf;
+    size_t const len = socket.receive(boost::asio::buffer(recv_buf));
+    std::string const received_message(recv_buf.data(), len);
+    std::cout << "received from server: " << received_message << std::endl;
+
 };
 void manageDigiLibBook::showBookList(){
 
-    //assign the size of the vector in an unsigned int variable.
-    unsigned int size = myBook.size();
+    /*myBook.clear();
 
-    //iterate through vector and display the entered data from vector.
 
-    for (auto &bObj : myBook) {
-		std::cout << "\tBook Title:           " << bObj.bookTitle << " " << bObj.bookBorrowed << std::endl;
-		std::cout << "\tBook Author:          " << bObj.bookAuthor << std::endl;
-		std::cout << "\tBook ISBN:            " << bObj.bookISBN << std::endl;
-		std::cout << "\tBook Publish Year:    " << bObj.bookPublishYear << std::endl;
-		std::cout << "\t****************************************************" << std::endl;
-		std::cout << std::endl;
-	}
-        std::cout << std::endl;
-
-    typedef boost::asio::ip::tcp asiotcp;
-    std::stringstream ss;
 
     boost::archive::text_oarchive oa{ss};
-    oa << bObj;
+    oa << bObj;*/
+    typedef boost::asio::ip::tcp asiotcp;
+    std::stringstream ss;
+    std::string output = ss.str() + "+" + "2";
 
-    std::string output = ss.str();
-
+    // sending Request
     boost::asio::io_service io_service;
     asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
     asiotcp::socket socket(io_service);
@@ -81,18 +91,31 @@ void manageDigiLibBook::showBookList(){
     socket.connect(server_endpoint);
     socket.send(boost::asio::buffer(output));
 
-    //std::cout << "client response show list of Books" << output << std::endl;
+    // Receiving Response
+    std::array<char, 128> recv_buf;
+    size_t const len = socket.receive(boost::asio::buffer(recv_buf));
+    //digiLibBook tempObj;
+    std::string received_message(recv_buf.data(), len);
+
+        std::stringstream ss1;
+        ss1 << received_message;
+        boost::archive::text_iarchive oa1{ss1};
+        oa1 & myBook;
+        std::cout << myBook.size() << std::endl;
+
+        for(int i=0;i<myBook.size();i++){
+            dumpBook(myBook[i]);
+        }
 }
 void manageDigiLibBook::modifyBook(){
 
-    int srNo;
+    digiLibBook t;
     unsigned int size = myBook.size();
+    int srNo;
 
         //iterating through vector and displaying each item of each element of the vector
         for(int i=0; i<size; i++){
-
             std::cout << "\t" << i << " " << "\tBook Title:        " << myBook[i].bookTitle << std::endl;
-            srNo = i;
         }
             //Getting input from user to modify the vector element.
             std::cout << std::endl;
@@ -100,55 +123,117 @@ void manageDigiLibBook::modifyBook(){
             std::cin>>srNo;
             std::cout << "\tBook Title:         ";
             std::cin.ignore();
-            getline(std::cin, myBook[srNo].bookTitle);
+            getline(std::cin, t.bookTitle);
             std::cout << "\tBook Author:        ";
-            getline(std::cin, myBook[srNo].bookAuthor);
+            getline(std::cin, t.bookAuthor);
             std::cout << "\tBookISBN:           ";
-            getline(std::cin, myBook[srNo].bookISBN);
+            getline(std::cin, t.bookISBN);
             std::cout << "\tBookYear:           ";
-            getline(std::cin, myBook[srNo].bookPublishYear);
+            getline(std::cin, t.bookPublishYear);
             std::cout << "\tYou have successfully modified Book No. " << srNo << std::endl;
             std::cout << std::endl;
             std::cout << "\t****************************************************" << std::endl;
+
+            std::stringstream ss;
+            typedef boost::asio::ip::tcp asiotcp;
+            boost::archive::text_oarchive oa{ss};
+            oa << t;
+            std::string output = ss.str() + "+"+"3";
+
+            //Sending data to server
+            boost::asio::io_service io_service;
+            asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+            asiotcp::socket socket(io_service);
+            socket.open(asiotcp::v4());
+            socket.connect(server_endpoint);
+            socket.send(boost::asio::buffer(output));
+
+            //Receiving data from Server
+            std::array<char, 128> recv_buf;
+            size_t const len = socket.receive(boost::asio::buffer(recv_buf));
+            std::string const received_message(recv_buf.data(), len);
+            std::cout << "received from server: " << received_message << std::endl;
+
     }
 
 void manageDigiLibBook::markBookBorrowed(){
 
-         int srNo;
+
          std::string mborrow;
+         digiLibBook d;
 
          unsigned int size = myBook.size();
 
         for(int i=0; i<size; i++){
 
-            std::cout << "\t" << i << " " << "\tBook Title:        " << myBook[i].bookTitle << std::endl;
-            srNo = i;
+            std::cout << "Book ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
         }
             std::cout << std::endl;
-            std::cout << "\tSelect a book to mark Borrowed: ";
-            std::cin>>srNo;
+            std::cout << "\tSelect ISBN to marked Borrowed: ";
+            std::cin>>d.bookISBN;
             std::cout << std::endl;
             std::cout << "\tPress (B) or (b) to Mark this Book as Borrowed: ";
-            std::cin >> myBook[srNo].bookBorrowed;
-            std::cout << std::endl;
-            std::cout << "\t" << srNo << " Book Title:      " << myBook[srNo].bookTitle << " marked as Borrowed!" << std::endl;
+            std::cin >> d.bookBorrowed;
             std::cout << std::endl;
             std::cout << "\t****************************************************" << std::endl;
+
+            std::stringstream ss;
+            typedef boost::asio::ip::tcp asiotcp;
+            boost::archive::text_oarchive oa{ss};
+            oa << d;
+            std::string output = ss.str() + "+"+"4";
+
+            //Sending data to server
+            boost::asio::io_service io_service;
+            asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+            asiotcp::socket socket(io_service);
+            socket.open(asiotcp::v4());
+            socket.connect(server_endpoint);
+            socket.send(boost::asio::buffer(output));
+
+            //Receiving data from Server
+            std::array<char, 128> recv_buf;
+            size_t const len = socket.receive(boost::asio::buffer(recv_buf));
+            std::string const received_message(recv_buf.data(), len);
+            std::cout << "received from server: " << received_message << std::endl;
 }
 
 void manageDigiLibBook::showListOfBorrowedBooks(){
 
-    unsigned int size = myBook.size();
 
-    for(int i=0; i<size; i++){
+            typedef boost::asio::ip::tcp asiotcp;
+            std::stringstream ss;
 
-        //std::cout << "\t" << i << " " << "\tBook Title:         " << myBook[i].bookTitle << " " << myBook[i].bookBorrowed << std::endl;
+            boost::archive::text_oarchive oa{ss};
+            oa << bObj;
 
-        if(myBook[i].bookBorrowed == "b" || myBook[i].bookBorrowed == "B"){
+            std::string output = ss.str() + "+" + "5";
 
-                std::cout << "\t" << i << " " << "\tBook Title:         " << myBook[i].bookTitle << std::endl;
+            // sending Request
+            boost::asio::io_service io_service;
+            asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+            asiotcp::socket socket(io_service);
+            socket.open(asiotcp::v4());
+            socket.connect(server_endpoint);
+            socket.send(boost::asio::buffer(output));
 
-        }
-    }
+            // Receiving Response
+            std::array<char, 128> recv_buf;
+            size_t const len = socket.receive(boost::asio::buffer(recv_buf));
+            //digiLibBook tempObj;
+            std::string received_message(recv_buf.data(), len);
+
+                std::stringstream ss1;
+                ss1 << received_message;
+                boost::archive::text_iarchive oa1{ss1};
+                oa1 & myBook;
+                std::cout << myBook.size() << std::endl;
+
+                for(int i=0; i<myBook.size(); i++){
+                    if(myBook[i].bookBorrowed == "b" || myBook[i].bookBorrowed == "B"){
+                        std::cout << "Borrowed Book ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
+                    }
+                }
+
 }
 

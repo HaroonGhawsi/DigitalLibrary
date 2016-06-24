@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haroonghawsi/DigitalLibrary/Server/digiLibServer
+CMAKE_SOURCE_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haroonghawsi/DigitalLibrary/Server/digiLibServer
+CMAKE_BINARY_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/digiLibServer.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/digiLibServer.dir/flags.make
 
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: CMakeFiles/digiLibServer.dir/flags.make
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o: src/digiLibServer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o -c /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp
 
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp > CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp > CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.i
 
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp -o CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp -o CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.s
 
 CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o.requires:
 .PHONY : CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o: CMakeFiles/digiLibServer.dir/flags.make
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o: src/digiLibData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o -c /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp
 
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp > CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp > CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.i
 
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp -o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp -o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.s
 
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o.requires:
 .PHONY : CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o.requires
@@ -125,6 +125,6 @@ CMakeFiles/digiLibServer.dir/clean:
 .PHONY : CMakeFiles/digiLibServer.dir/clean
 
 CMakeFiles/digiLibServer.dir/depend:
-	cd /home/haroonghawsi/DigitalLibrary/Server/digiLibServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haroonghawsi/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/digiLibServer.dir/depend
 

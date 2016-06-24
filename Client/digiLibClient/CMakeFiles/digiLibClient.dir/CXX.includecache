@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
 manageDigiLibBook.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.h
 digiLibBook.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/digiLibBook.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/digiLibBook.h
 user.h
-/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.h
 string
 -
 vector

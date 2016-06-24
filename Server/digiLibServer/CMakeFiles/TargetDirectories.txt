@@ -1,1 +1,1 @@
-/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir
+/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir

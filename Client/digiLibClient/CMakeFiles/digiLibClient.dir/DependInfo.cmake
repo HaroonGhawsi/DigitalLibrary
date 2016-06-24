@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp" "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/main.cpp.o"
-  "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp" "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o"
-  "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp" "/home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/src/user.cpp.o"
+  "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp" "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/main.cpp.o"
+  "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp" "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o"
+  "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp" "/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/src/user.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

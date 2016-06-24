@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp" "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
-  "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp" "/home/haroonghawsi/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o"
+  "/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.cpp" "/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
+  "/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp" "/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

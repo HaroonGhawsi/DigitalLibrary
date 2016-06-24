@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haroonghawsi/DigitalLibrary/Client/digiLibClient
+CMAKE_SOURCE_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haroonghawsi/DigitalLibrary/Client/digiLibClient
+CMAKE_BINARY_DIR = /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient
 
 # Include any dependencies generated for this target.
 include CMakeFiles/digiLibClient.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/digiLibClient.dir/flags.make
 
 CMakeFiles/digiLibClient.dir/main.cpp.o: CMakeFiles/digiLibClient.dir/flags.make
 CMakeFiles/digiLibClient.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibClient.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/main.cpp.o -c /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/main.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp
 
 CMakeFiles/digiLibClient.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibClient.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp > CMakeFiles/digiLibClient.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp > CMakeFiles/digiLibClient.dir/main.cpp.i
 
 CMakeFiles/digiLibClient.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibClient.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/main.cpp -o CMakeFiles/digiLibClient.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp -o CMakeFiles/digiLibClient.dir/main.cpp.s
 
 CMakeFiles/digiLibClient.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/digiLibClient.dir/main.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/digiLibClient.dir/main.cpp.o.provides.build: CMakeFiles/digiLibClient
 
 CMakeFiles/digiLibClient.dir/src/user.cpp.o: CMakeFiles/digiLibClient.dir/flags.make
 CMakeFiles/digiLibClient.dir/src/user.cpp.o: src/user.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibClient.dir/src/user.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/src/user.cpp.o -c /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/src/user.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp
 
 CMakeFiles/digiLibClient.dir/src/user.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibClient.dir/src/user.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp > CMakeFiles/digiLibClient.dir/src/user.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp > CMakeFiles/digiLibClient.dir/src/user.cpp.i
 
 CMakeFiles/digiLibClient.dir/src/user.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibClient.dir/src/user.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/user.cpp -o CMakeFiles/digiLibClient.dir/src/user.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp -o CMakeFiles/digiLibClient.dir/src/user.cpp.s
 
 CMakeFiles/digiLibClient.dir/src/user.cpp.o.requires:
 .PHONY : CMakeFiles/digiLibClient.dir/src/user.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/digiLibClient.dir/src/user.cpp.o.provides.build: CMakeFiles/digiLibCl
 
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o: CMakeFiles/digiLibClient.dir/flags.make
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o: src/manageDigiLibBook.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o -c /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
 
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp > CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp > CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.i
 
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp -o CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp -o CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.s
 
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o.requires:
 .PHONY : CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o.requires
@@ -151,6 +151,6 @@ CMakeFiles/digiLibClient.dir/clean:
 .PHONY : CMakeFiles/digiLibClient.dir/clean
 
 CMakeFiles/digiLibClient.dir/depend:
-	cd /home/haroonghawsi/DigitalLibrary/Client/digiLibClient && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haroonghawsi/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/CMakeFiles/digiLibClient.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/digiLibClient.dir/depend
 

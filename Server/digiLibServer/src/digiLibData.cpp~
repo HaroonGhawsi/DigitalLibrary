@@ -1,0 +1,112 @@
+#include "digiLibData.h"
+#include "digiLibBook.h"
+#include "digiLibData.h"
+#include "digiLibServer.h"
+#include <iostream>
+#include <sstream>
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/asio/ip/tcp.hpp>
+#include <boost/serialization/vector.hpp>
+
+
+typedef boost::asio::ip::tcp asiotcp;
+
+digiLibBook sObj;
+
+void dumpBook(digiLibBook const &odb)
+
+{
+ std::ostream &os = std::cout;
+ os << "\n******************************************" << std::endl;
+ os << "Book Title:         " << odb.bookTitle << std::endl;
+ os << "Book Author:        " << odb.bookAuthor << std::endl;
+ os << "Book ISBN:          " << odb.bookISBN << std::endl;
+ os << "Book Publish Year:  " << odb.bookPublishYear << std::endl;
+ os << "******************************************" << std::endl;
+
+}
+
+digiLibData::digiLibData(){}
+
+digiLibData::~digiLibData(){}
+
+void digiLibData::saveNewBookToMemory(std::string inputmessage){
+
+std::cout << "\n\nAdding New Book to Server..." << std::endl;
+
+try{
+
+    std::stringstream ss;
+    ss << inputmessage;
+    boost::archive::text_iarchive ia{ss};
+    ia >> sObj;
+
+    serverData.push_back(sObj);
+    dumpBook(sObj);
+
+    /*for(std::size_t i = 0; i < serverData.size(); i++){
+
+        //std::cout << serverData[i] << std::endl;
+	dumpBook(serverData[i]);
+    }*/ //prints the last element added to the Vector
+
+    }
+    catch(std::exception& e){
+
+    std::cerr << e.what() << std::endl;
+    }
+}
+
+void digiLibData::showAllBooksFromMemory(std::string){
+
+    std::cout << "\nList of Library Books" << std::endl;
+
+    typedef boost::asio::ip::tcp asiotcp;
+    std::stringstream ss;
+
+    boost::archive::text_oarchive oa{ss};
+    oa & sObj;
+
+	//std::cout << "Book Title:	" << sObj.bookTitle << std::endl;
+	
+	dumpBook(sObj);
+}
+
+    //dumpBook(sObj);
+
+    std::string output = ss.str();
+
+    boost::asio::io_service io_service;
+    asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
+    asiotcp::socket socket(io_service);
+    socket.open(asiotcp::v4());
+    socket.connect(server_endpoint);
+    //std::cout << "\nServer Show list of Books" << output << std::endl;
+    socket.send(boost::asio::buffer(output));
+
+	dumpBook(output);
+
+    //std::cout << "this is from show all books " << output << std::endl;
+    }
+/*
+void digiLibData::updateBookInMemory(){
+
+    //update the same index data from the client. serverData vector is already sent to Client.
+
+    std::cout << "The Book has been modified in Server Memory" << std::endl;
+}
+void digiLibData::markBookBorrowedInMemory(){
+    //Server data is already serialized and sent to client, marking borrowed will be saved to Server.
+
+    std::cout << " Book has been marked borrowed " << std::endl;
+}
+
+void digiLibData::showAllBorrowedBooksFromMemory(){
+
+    //Will show list of Borrowed Books from the server
+    std::cout << "List of Borrowed Books" << std::endl;
+
+};
+*/
+

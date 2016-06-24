@@ -10,11 +10,7 @@
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/ip/tcp.hpp>
 
-
-
 int main(int argc, char* argv[]){
-
-
 
     try{
 

@@ -11,11 +11,11 @@ class digiLibData
         digiLibData();
         virtual ~digiLibData();
 
-        void saveNewBookToMemory(std::string);
-        void showAllBooksFromMemory();
-        void updateBookInMemory();
-        void markBookBorrowedInMemory();
-        void showAllBorrowedBooksFromMemory();
+        std::string saveNewBookToMemory(std::string);
+        std::string showAllBooksFromMemory();
+        std::string updateBookInMemory(std::string modBook);
+        std::string markBookBorrowedInMemory(std::string markBook);
+        std::string showAllBorrowedBooksFromMemory();
 
 
     protected:

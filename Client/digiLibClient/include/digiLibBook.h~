@@ -1,22 +1,36 @@
 #ifndef DIGILIBBOOK_H
 #define DIGILIBBOOK_H
 
-#include <iostream>
-#include <string>
+#include <boost/serialization/vector.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 
 class digiLibBook
 {
     public:
-        digiLibBook();
-        virtual ~digiLibBook();
 
         std::string bookTitle;
         std::string bookAuthor;
         std::string bookISBN;
         std::string bookPublishYear;
+        std::string bookBorrowed;
 
-    protected:
+        friend class boost::serialization::access;
+
+        template<typename Archive>
+
+        void serialize(Archive & ar, std::vector<digiLibBook>& myBook; const unsigned int version){
+
+        ar << myBook.size();
+	
+	for(size_t i = 0; i < myBook.size(); ++i){
+	ar << myBook[i];
+	}
+    }
+
     private:
+
+
 };
 
 #endif // DIGILIBBOOK_H

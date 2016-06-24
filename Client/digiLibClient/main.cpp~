@@ -33,17 +33,18 @@ int main(int argc, char* argv[]){
     socket.open(asiotcp::v4());
 
     socket.connect(server_endpoint);
-    std::string const send_buf = "Hello DigiLibServer";
-    socket.send(boost::asio::buffer(send_buf));
-
-    user uObj;
-    uObj.showMainMenu();
+    //std::string const send_buf = "Hello Digital Library Server";
+    //socket.send(boost::asio::buffer(send_buf));
 
     std::array<char, 128> recv_buf;
     size_t const len = socket.receive(boost::asio::buffer(recv_buf));
 
     std::string const received_message(recv_buf.data(), len);
     std::cout << "received from server: \"" << received_message << "\"" << std::endl;
+
+    user uObj;
+    uObj.showMainMenu();
+
     }
     catch (std::exception const &e){
 

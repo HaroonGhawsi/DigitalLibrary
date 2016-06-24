@@ -11,16 +11,18 @@
 
 
 typedef boost::asio::ip::tcp asiotcp;
+
 digiLibBook sObj;
 
 void dumpBook(digiLibBook const &odb)
+
 {
  std::ostream &os = std::cout;
  os << "\n******************************************" << std::endl;
- os << "Book Title: " << odb.bookTitle << std::endl;
- os << "Book Author: " << odb.bookAuthor << std::endl;
- os << "Book ISBN: " << odb.bookISBN << std::endl;
- os << "Book Publish Year: " << odb.bookPublishYear << std::endl;
+ os << "Book Title:         " << odb.bookTitle << std::endl;
+ os << "Book Author:        " << odb.bookAuthor << std::endl;
+ os << "Book ISBN:          " << odb.bookISBN << std::endl;
+ os << "Book Publish Year:  " << odb.bookPublishYear << std::endl;
  os << "******************************************" << std::endl;
 
 }
@@ -29,81 +31,97 @@ digiLibData::digiLibData(){}
 
 digiLibData::~digiLibData(){}
 
-void digiLibData::saveNewBookToMemory(std::string inputmessage){
 
-try{
+std::string digiLibData::saveNewBookToMemory(std::string inputmessage){
 
-    std::stringstream ss;
-    ss << inputmessage;
-    boost::archive::text_iarchive ia{ss};
-    ia >> sObj;
+    try{
+        std::stringstream ss;
+        ss << inputmessage;
+        boost::archive::text_iarchive ia{ss};
+        ia >> sObj;
 
-    serverData.push_back(sObj);
-    //dumpBook(sObj);
-
-    std::cout << "\n --> New Book has been saved to Server memory!" << std::endl;
-
+        serverData.push_back(sObj);
+        return "Book Added";
     }
     catch(std::exception& e){
 
-    std::cerr << e.what() << std::endl;
+        std::cerr << e.what() << std::endl;
     }
 }
 
-void digiLibData::showAllBooksFromMemory(){
-
-    unsigned int size = serverData.size();
-
-    //iterate through vector and display the entered data from vector.
-
-    for (digiLibBook sObj : serverData) {
-        /*
-        std::string bookTitle = sObj.bookTitle;
-        std::string bookAuthor = sObj.bookAuthor;
-        std::string bookBorrowed = sObj.bookBorrowed;
-        std::string bookISBN = sObj.bookISBN;
-        std::string bookPublishYear = sObj.bookPublishYear;
-        std::cout << listOfAllBooks << std::endl;
-        */
+std::string digiLibData::showAllBooksFromMemory(){
 
     typedef boost::asio::ip::tcp asiotcp;
     std::stringstream ss;
 
     boost::archive::text_oarchive oa{ss};
-    oa << sObj;
-
+    oa & serverData;
     std::string output = ss.str();
+    return output;
+}
 
-    boost::asio::io_service io_service;
-    asiotcp::endpoint server_endpoint = asiotcp::endpoint(boost::asio::ip::address_v4::from_string("127.0.0.1"), 4000);
-    asiotcp::socket socket(io_service);
-    socket.open(asiotcp::v4());
-    socket.connect(server_endpoint);
-    //std::cout << "Server Show list of Books" << output << std::endl;
-    socket.send(boost::asio::buffer(output));
+std::string digiLibData::updateBookInMemory(std::string modBook){
 
-    //std::cout << "this is from show all books " << output << std::endl;
+    try{
+
+        digiLibBook tempObj;
+        std::stringstream ss;
+        ss << modBook;
+        boost::archive::text_iarchive ia{ss};
+        ia >> tempObj;
+
+        for(int i = 0; i < serverData.size(); i++){
+
+            if(tempObj.bookISBN == serverData[i].bookISBN){
+                serverData.erase(serverData.begin()+i);
+                serverData.push_back(tempObj);
+                return "Book Updated";
+            }
+        }
+    }catch(std::exception& e){
+        std::cerr << e.what() << std::endl;
     }
 
+    return "Book Not Updated";
 }
-/*
-void digiLibData::updateBookInMemory(){
 
-    //update the same index data from the client. serverData vector is already sent to Client.
 
-    std::cout << "The Book has been modified in Server Memory" << std::endl;
-}
-void digiLibData::markBookBorrowedInMemory(){
+std::string digiLibData::markBookBorrowedInMemory(std::string markBook){
     //Server data is already serialized and sent to client, marking borrowed will be saved to Server.
 
-    std::cout << " Book has been marked borrowed " << std::endl;
+    try{
+
+        digiLibBook d;
+        std::stringstream ss;
+        ss << markBook;
+        boost::archive::text_iarchive ia{ss};
+        ia >> d;
+
+        for(int i = 0; i < serverData.size(); i++){
+
+            if(d.bookISBN == serverData[i].bookISBN){
+                serverData[i].bookBorrowed = d.bookBorrowed;
+                return "Book Borrowed";
+            }
+        }
+    }catch(std::exception& e){
+        std::cerr << e.what() << std::endl;
+    }
+
+    return "Book Not Borrowed";
 }
 
-void digiLibData::showAllBorrowedBooksFromMemory(){
+
+std::string digiLibData::showAllBorrowedBooksFromMemory(){
 
     //Will show list of Borrowed Books from the server
-    std::cout << "List of Borrowed Books" << std::endl;
+    typedef boost::asio::ip::tcp asiotcp;
+    std::stringstream ss;
 
+    boost::archive::text_oarchive oa{ss};
+    oa & serverData;
+    std::string output = ss.str();
+    return output;
 };
-*/
+
 
