@@ -6,29 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.cpp
-manage_User.h
-/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp
+iostream
+-
+string
+-
+memory
+-
+vector
+-
+sstream
+-
+boost/asio/buffer.hpp
+-
+boost/asio/io_service.hpp
+-
+boost/asio/ip/tcp.hpp
+-
+boost/archive/text_iarchive.hpp
+-
+boost/algorithm/string.hpp
+-
 digiLibData.h
 /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.h
 digiLibBook.h
 /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibBook.h
-digiLibData.h
-/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibData.h
-digiLibServer.h
-/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.h
-iostream
--
-sstream
--
-boost/archive/text_iarchive.hpp
--
-boost/archive/text_oarchive.hpp
--
-boost/asio/ip/tcp.hpp
--
-boost/serialization/vector.hpp
--
+manage_User.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.h
 
 include/digiLibBook.h
 boost/serialization/vector.hpp
@@ -45,8 +49,6 @@ digiLibBook.h
 include/digiLibBook.h
 vector
 -
-
-include/digiLibServer.h
 
 include/manage_User.h
 digiLibData.h

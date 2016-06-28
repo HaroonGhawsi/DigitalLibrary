@@ -106,9 +106,6 @@ int main(){
                         std::cout << msg << std::endl;
                         socket.send(boost::asio::buffer(msg));
                     }
-
-
-                    //Add USer functionality
                 }
                 else{
 

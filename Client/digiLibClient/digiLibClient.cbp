@@ -36,9 +36,11 @@
 		</Compiler>
 		<Unit filename="include/digiLibBook.h" />
 		<Unit filename="include/manageDigiLibBook.h" />
+		<Unit filename="include/manage_user.h" />
 		<Unit filename="include/user.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/manageDigiLibBook.cpp" />
+		<Unit filename="src/manage_user.cpp" />
 		<Unit filename="src/user.cpp" />
 		<Extensions>
 			<code_completion />

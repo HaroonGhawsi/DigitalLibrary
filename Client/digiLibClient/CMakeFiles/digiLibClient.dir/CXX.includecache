@@ -6,9 +6,53 @@
 
 #IncludeRegexTransform: 
 
-/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manage_user.cpp
-manage_user.h
-/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manage_user.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp
+iostream
+-
+digiLibBook.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/digiLibBook.h
+manageDigiLibBook.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/manageDigiLibBook.h
+user.h
+/home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/user.h
+vector
+-
+memory
+-
+string
+-
+boost/asio.hpp
+-
+boost/asio/buffer.hpp
+-
+boost/asio/io_service.hpp
+-
+boost/asio/ip/tcp.hpp
+-
+
+include/digiLibBook.h
+boost/serialization/vector.hpp
+-
+boost/archive/text_oarchive.hpp
+-
+boost/archive/text_iarchive.hpp
+-
+
+include/manageDigiLibBook.h
+iostream
+-
+string
+-
+vector
+-
+boost/serialization/vector.hpp
+-
+boost/archive/text_oarchive.hpp
+-
+boost/archive/text_iarchive.hpp
+-
+digiLibBook.h
+include/digiLibBook.h
 
 include/manage_user.h
 iostream
@@ -35,4 +79,10 @@ boost/asio/io_service.hpp
 -
 boost/asio/ip/tcp.hpp
 -
+
+include/user.h
+manageDigiLibBook.h
+include/manageDigiLibBook.h
+manage_user.h
+include/manage_user.h
 

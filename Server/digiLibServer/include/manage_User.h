@@ -25,7 +25,7 @@ class manage_User
         std::string addUser(std::string);
         std::string updateUser(std::string modUser);
         std::string showUserList();
-        std::string removeUser();
+        //std::string removeUser();
 
 
     friend class boost::serialization::access;

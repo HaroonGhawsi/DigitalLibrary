@@ -38,8 +38,10 @@
 		<Unit filename="include/digiLibBook.h" />
 		<Unit filename="include/digiLibData.h" />
 		<Unit filename="include/digiLibServer.h" />
+		<Unit filename="include/manage_User.h" />
 		<Unit filename="src/digiLibData.cpp" />
 		<Unit filename="src/digiLibServer.cpp" />
+		<Unit filename="src/manage_User.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
