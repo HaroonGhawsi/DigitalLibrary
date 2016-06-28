@@ -18,7 +18,7 @@ SET(CMAKE_CXX_FLAGS "-std=c++11")
 # tcpserver
 set(EXEC_NAME "digiLibServer")
 
-add_executable(${EXEC_NAME} src/digiLibServer.cpp src/digiLibData.cpp)
+add_executable(${EXEC_NAME} src/digiLibServer.cpp src/digiLibData.cpp src/manage_User.cpp)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD 11)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD_REQUIRED true)
 

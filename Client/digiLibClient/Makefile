@@ -163,6 +163,30 @@ src/manageDigiLibBook.cpp.s:
 	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.s
 .PHONY : src/manageDigiLibBook.cpp.s
 
+src/manage_user.o: src/manage_user.cpp.o
+.PHONY : src/manage_user.o
+
+# target to build an object file
+src/manage_user.cpp.o:
+	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/src/manage_user.cpp.o
+.PHONY : src/manage_user.cpp.o
+
+src/manage_user.i: src/manage_user.cpp.i
+.PHONY : src/manage_user.i
+
+# target to preprocess a source file
+src/manage_user.cpp.i:
+	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/src/manage_user.cpp.i
+.PHONY : src/manage_user.cpp.i
+
+src/manage_user.s: src/manage_user.cpp.s
+.PHONY : src/manage_user.s
+
+# target to generate assembly for a file
+src/manage_user.cpp.s:
+	$(MAKE) -f CMakeFiles/digiLibClient.dir/build.make CMakeFiles/digiLibClient.dir/src/manage_user.cpp.s
+.PHONY : src/manage_user.cpp.s
+
 src/user.o: src/user.cpp.o
 .PHONY : src/user.o
 
@@ -202,6 +226,9 @@ help:
 	@echo "... src/manageDigiLibBook.o"
 	@echo "... src/manageDigiLibBook.i"
 	@echo "... src/manageDigiLibBook.s"
+	@echo "... src/manage_user.o"
+	@echo "... src/manage_user.i"
+	@echo "... src/manage_user.s"
 	@echo "... src/user.o"
 	@echo "... src/user.i"
 	@echo "... src/user.s"

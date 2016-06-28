@@ -36,10 +36,10 @@ int main(int argc, char* argv[]){
     size_t const len = socket.receive(boost::asio::buffer(recv_buf));
 
     std::string const received_message(recv_buf.data(), len);
-    std::cout << "received from server: \"" << received_message << "\"" << std::endl;
+    std::cout << "\treceived from server: \"" << received_message << "\"" << std::endl;
 
-    user uObj;
-    uObj.showMainMenu();
+    user u_Obj;
+    u_Obj.showMainMenu();
 
     }
     catch (std::exception const &e){
@@ -51,3 +51,4 @@ int main(int argc, char* argv[]){
 return 0;
 
 }
+

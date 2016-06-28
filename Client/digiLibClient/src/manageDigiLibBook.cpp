@@ -17,11 +17,11 @@ void dumpBook(digiLibBook const &odb)
 
 {
  std::ostream &os = std::cout;
- os << "\n******************************************" << std::endl;
- os << "Book Title:         " << odb.bookTitle << std::endl;
- os << "Book Author:        " << odb.bookAuthor << std::endl;
- os << "Book ISBN:          " << odb.bookISBN << std::endl;
- os << "Book Publish Year:  " << odb.bookPublishYear << std::endl;
+ os << "\n\t******************************************" << std::endl;
+ os << "\tBook Title:         " << odb.bookTitle << std::endl;
+ os << "\tBook Author:        " << odb.bookAuthor << std::endl;
+ os << "\tBook ISBN:          " << odb.bookISBN << std::endl;
+ os << "\tBook Publish Year:  " << odb.bookPublishYear << std::endl;
  os << "******************************************" << std::endl;
 
 }
@@ -38,7 +38,7 @@ void manageDigiLibBook::addNewBook(){
     //Print book details and get the user input
 
     std::cout << "\n\n\t------------Add New Book------------";
-	std::cout << "\n\tBook Title:            ";
+	std::cout << "\n\tBook Title:           ";
 	std::cin.ignore();
 	getline(std::cin, bObj.bookTitle);
 	std::cout << "\tBook Author:            ";
@@ -68,20 +68,20 @@ void manageDigiLibBook::addNewBook(){
     std::array<char, 128> recv_buf;
     size_t const len = socket.receive(boost::asio::buffer(recv_buf));
     std::string const received_message(recv_buf.data(), len);
-    std::cout << "received from server: " << received_message << std::endl;
+    std::cout << "\t" << "received from server: " << received_message << std::endl;
 
 };
 void manageDigiLibBook::showBookList(){
 
-    /*myBook.clear();
-
-
-
-    boost::archive::text_oarchive oa{ss};
-    oa << bObj;*/
     typedef boost::asio::ip::tcp asiotcp;
     std::stringstream ss;
-    std::string output = ss.str() + "+" + "2";
+
+    myBook.clear();
+    boost::archive::text_oarchive oa{ss};
+    oa << bObj;
+
+
+    std::string output = ss.str() + "+"+"2";
 
     // sending Request
     boost::asio::io_service io_service;
@@ -101,7 +101,7 @@ void manageDigiLibBook::showBookList(){
         ss1 << received_message;
         boost::archive::text_iarchive oa1{ss1};
         oa1 & myBook;
-        std::cout << myBook.size() << std::endl;
+        //std::cout << myBook.size() << std::endl;
 
         for(int i=0;i<myBook.size();i++){
             dumpBook(myBook[i]);
@@ -132,7 +132,7 @@ void manageDigiLibBook::modifyBook(){
             getline(std::cin, t.bookPublishYear);
             std::cout << "\tYou have successfully modified Book No. " << srNo << std::endl;
             std::cout << std::endl;
-            std::cout << "\t****************************************************" << std::endl;
+            std::cout << "\t****************************************************\n\n" << std::endl;
 
             std::stringstream ss;
             typedef boost::asio::ip::tcp asiotcp;
@@ -152,7 +152,7 @@ void manageDigiLibBook::modifyBook(){
             std::array<char, 128> recv_buf;
             size_t const len = socket.receive(boost::asio::buffer(recv_buf));
             std::string const received_message(recv_buf.data(), len);
-            std::cout << "received from server: " << received_message << std::endl;
+            std::cout << "\t" << "\n\treceived from server: " << received_message << std::endl;
 
     }
 
@@ -166,7 +166,7 @@ void manageDigiLibBook::markBookBorrowed(){
 
         for(int i=0; i<size; i++){
 
-            std::cout << "Book ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
+            std::cout << "\tBook ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
         }
             std::cout << std::endl;
             std::cout << "\tSelect ISBN to marked Borrowed: ";
@@ -175,7 +175,7 @@ void manageDigiLibBook::markBookBorrowed(){
             std::cout << "\tPress (B) or (b) to Mark this Book as Borrowed: ";
             std::cin >> d.bookBorrowed;
             std::cout << std::endl;
-            std::cout << "\t****************************************************" << std::endl;
+            std::cout << "\t****************************************************\n\n" << std::endl;
 
             std::stringstream ss;
             typedef boost::asio::ip::tcp asiotcp;
@@ -195,7 +195,7 @@ void manageDigiLibBook::markBookBorrowed(){
             std::array<char, 128> recv_buf;
             size_t const len = socket.receive(boost::asio::buffer(recv_buf));
             std::string const received_message(recv_buf.data(), len);
-            std::cout << "received from server: " << received_message << std::endl;
+            std::cout << "\t" << "received from server: " << received_message << std::endl;
 }
 
 void manageDigiLibBook::showListOfBorrowedBooks(){
@@ -231,7 +231,7 @@ void manageDigiLibBook::showListOfBorrowedBooks(){
 
                 for(int i=0; i<myBook.size(); i++){
                     if(myBook[i].bookBorrowed == "b" || myBook[i].bookBorrowed == "B"){
-                        std::cout << "Borrowed Book ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
+                        std::cout << "\tBorrowed Book ISBN " << myBook[i].bookISBN << " " << "\tBook Title: " << myBook[i].bookTitle << std::endl;
                     }
                 }
 

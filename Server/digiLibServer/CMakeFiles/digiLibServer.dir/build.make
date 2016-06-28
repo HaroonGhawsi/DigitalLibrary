@@ -95,16 +95,41 @@ CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o.provides: CMakeFiles/digiLibS
 
 CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o.provides.build: CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o
 
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o: CMakeFiles/digiLibServer.dir/flags.make
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o: src/manage_User.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o -c /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.cpp
+
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/digiLibServer.dir/src/manage_User.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.cpp > CMakeFiles/digiLibServer.dir/src/manage_User.cpp.i
+
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/digiLibServer.dir/src/manage_User.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.cpp -o CMakeFiles/digiLibServer.dir/src/manage_User.cpp.s
+
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.requires:
+.PHONY : CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.requires
+
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.provides: CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.requires
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.provides.build
+.PHONY : CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.provides
+
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.provides.build: CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o
+
 # Object files for target digiLibServer
 digiLibServer_OBJECTS = \
 "CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o" \
-"CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
+"CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o" \
+"CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o"
 
 # External object files for target digiLibServer
 digiLibServer_EXTERNAL_OBJECTS =
 
 digiLibServer: CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o
 digiLibServer: CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o
+digiLibServer: CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o
 digiLibServer: CMakeFiles/digiLibServer.dir/build.make
 digiLibServer: /usr/lib/x86_64-linux-gnu/libboost_system.so
 digiLibServer: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
@@ -118,6 +143,7 @@ CMakeFiles/digiLibServer.dir/build: digiLibServer
 
 CMakeFiles/digiLibServer.dir/requires: CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o.requires
 CMakeFiles/digiLibServer.dir/requires: CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o.requires
+CMakeFiles/digiLibServer.dir/requires: CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o.requires
 .PHONY : CMakeFiles/digiLibServer.dir/requires
 
 CMakeFiles/digiLibServer.dir/clean:

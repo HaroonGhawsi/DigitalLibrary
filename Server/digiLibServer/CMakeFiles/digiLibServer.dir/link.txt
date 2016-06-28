@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11    CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o  -o digiLibServer -rdynamic -lboost_system -lboost_serialization 
+/usr/bin/c++   -std=c++11    CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o  -o digiLibServer -rdynamic -lboost_system -lboost_serialization 

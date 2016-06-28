@@ -10,6 +10,7 @@
 #include <boost/algorithm/string.hpp>
 #include "digiLibData.h"
 #include "digiLibBook.h"
+#include "manage_User.h"
 
 
 class digiLibServer
@@ -44,6 +45,7 @@ int main(){
         typedef boost::asio::ip::tcp asiotcp;
         boost::asio::io_service io_service;
          digiLibData dbData;
+         manage_User muData;
          int static first = 0;
 
         while(true){
@@ -88,7 +90,25 @@ int main(){
                         std::string msg = dbData.showAllBorrowedBooksFromMemory();
                         std::cout << "Show All Borrowed Books" << std::endl;
                         socket.send(boost::asio::buffer(msg));
+                    }else if(parts[1] == "6"){
+
+                        std::string msg = muData.addUser(parts[0]);
+                        std::cout << msg << std::endl;
+                        socket.send(boost::asio::buffer(msg));
+                    }else if(parts[1] == "7"){
+
+                        std::string msg = muData.showUserList();
+                        std::cout << "Show list of Users" << std::endl;
+                        socket.send(boost::asio::buffer(msg));
+                    }else if(parts[1] == "8"){
+
+                        std::string msg = muData.updateUser(parts[0]);
+                        std::cout << msg << std::endl;
+                        socket.send(boost::asio::buffer(msg));
                     }
+
+
+                    //Add USer functionality
                 }
                 else{
 

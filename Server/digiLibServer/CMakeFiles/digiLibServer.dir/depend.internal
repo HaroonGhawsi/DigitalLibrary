@@ -10,3 +10,10 @@ CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o
  /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/digiLibServer.cpp
  include/digiLibBook.h
  include/digiLibData.h
+ include/manage_User.h
+CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o
+ /home/haroonghawsi/Desktop/DigitalLibrary/Server/digiLibServer/src/manage_User.cpp
+ include/digiLibBook.h
+ include/digiLibData.h
+ include/digiLibServer.h
+ include/manage_User.h

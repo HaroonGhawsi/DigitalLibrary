@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.o"
   "CMakeFiles/digiLibServer.dir/src/digiLibData.cpp.o"
+  "CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o"
   "digiLibServer.pdb"
   "digiLibServer"
 )

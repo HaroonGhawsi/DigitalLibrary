@@ -18,7 +18,7 @@ SET(CMAKE_CXX_FLAGS "-std=c++11")
 
 set(EXEC_NAME "digiLibClient")
 
-add_executable(${EXEC_NAME} main.cpp src/user.cpp src/manageDigiLibBook.cpp )
+add_executable(${EXEC_NAME} main.cpp src/user.cpp src/manageDigiLibBook.cpp src/manage_user.cpp )
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD 11)
 #set_property(TARGET ${EXEC_NAME} PROPERTY CXX_STANDARD_REQUIRED true)
 

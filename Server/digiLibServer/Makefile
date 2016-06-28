@@ -163,6 +163,30 @@ src/digiLibServer.cpp.s:
 	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/digiLibServer.cpp.s
 .PHONY : src/digiLibServer.cpp.s
 
+src/manage_User.o: src/manage_User.cpp.o
+.PHONY : src/manage_User.o
+
+# target to build an object file
+src/manage_User.cpp.o:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/manage_User.cpp.o
+.PHONY : src/manage_User.cpp.o
+
+src/manage_User.i: src/manage_User.cpp.i
+.PHONY : src/manage_User.i
+
+# target to preprocess a source file
+src/manage_User.cpp.i:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/manage_User.cpp.i
+.PHONY : src/manage_User.cpp.i
+
+src/manage_User.s: src/manage_User.cpp.s
+.PHONY : src/manage_User.s
+
+# target to generate assembly for a file
+src/manage_User.cpp.s:
+	$(MAKE) -f CMakeFiles/digiLibServer.dir/build.make CMakeFiles/digiLibServer.dir/src/manage_User.cpp.s
+.PHONY : src/manage_User.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,6 +202,9 @@ help:
 	@echo "... src/digiLibServer.o"
 	@echo "... src/digiLibServer.i"
 	@echo "... src/digiLibServer.s"
+	@echo "... src/manage_User.o"
+	@echo "... src/manage_User.i"
+	@echo "... src/manage_User.s"
 .PHONY : help
 
 

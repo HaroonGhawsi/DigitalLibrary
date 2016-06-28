@@ -2,6 +2,7 @@
 #define USER_H
 
 #include "manageDigiLibBook.h"
+#include "manage_user.h"
 
 class user
 {
@@ -10,6 +11,7 @@ class user
 
 	protected:
     	manageDigiLibBook m_lib;
+    	manage_user m_User;
 };
 #endif
 

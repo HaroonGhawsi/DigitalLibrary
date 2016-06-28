@@ -5,14 +5,20 @@ CMakeFiles/digiLibClient.dir/main.cpp.o
  /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/main.cpp
  include/digiLibBook.h
  include/manageDigiLibBook.h
+ include/manage_user.h
  include/user.h
 CMakeFiles/digiLibClient.dir/src/manageDigiLibBook.cpp.o
  /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manageDigiLibBook.cpp
  include/digiLibBook.h
  include/manageDigiLibBook.h
+ include/manage_user.h
  include/user.h
+CMakeFiles/digiLibClient.dir/src/manage_user.cpp.o
+ /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/manage_user.cpp
+ include/manage_user.h
 CMakeFiles/digiLibClient.dir/src/user.cpp.o
  /home/haroonghawsi/Desktop/DigitalLibrary/Client/digiLibClient/src/user.cpp
  include/digiLibBook.h
  include/manageDigiLibBook.h
+ include/manage_user.h
  include/user.h
